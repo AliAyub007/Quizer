@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Instructor">
+   <children>
+      <Button fx:id="createQuiz" alignment="CENTER" layoutX="382.0" layoutY="293.0" mnemonicParsing="false" onAction="#onClickCreateQuiz" text="Create Quiz" textAlignment="CENTER" />
+      <ListView fx:id="quizList" layoutX="29.0" layoutY="42.0" prefHeight="341.0" prefWidth="262.0" />
+      <Text layoutX="85.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exisiting Quiz List">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

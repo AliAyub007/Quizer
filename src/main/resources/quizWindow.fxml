@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.student">
+   <children>
+      <Text layoutX="275.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="38.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is your name?" wrappingWidth="524.21875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <RadioButton layoutX="38.0" layoutY="125.0" mnemonicParsing="false" text="RadioButton">
+         <toggleGroup>
+            <ToggleGroup fx:id="questionOptions" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="38.0" layoutY="160.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$questionOptions" />
+      <RadioButton layoutX="38.0" layoutY="191.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$questionOptions" />
+      <RadioButton layoutX="38.0" layoutY="224.0" mnemonicParsing="false" text="RadioButton" toggleGroup="$questionOptions" />
+      <TextField fx:id="numericOption" layoutX="38.0" layoutY="120.0" visible="false" />
+      <Button layoutX="439.0" layoutY="329.0" mnemonicParsing="false" text="Next" />
+      <Button layoutX="500.0" layoutY="329.0" mnemonicParsing="false" text="Finish Quiz" />
+   </children>
+</Pane>

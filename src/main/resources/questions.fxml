@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Instructor">
+   <children>
+      <Button layoutX="484.0" layoutY="22.0" mnemonicParsing="false" onAction="#onAddQuestion" text="Add Question" />
+      <GridPane layoutX="3.0" layoutY="173.0" prefHeight="223.0" prefWidth="456.0" style="-fx-background-color: #46556d;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="finish" alignment="CENTER" mnemonicParsing="false" onAction="#onQuestionFinish" text="Finish" textAlignment="CENTER" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets top="10.0" />
+               </GridPane.margin></Button>
+            <VBox fx:id="maximumScore" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" visible="false" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Maximum Score" textAlignment="CENTER" />
+                  <TextField fx:id="maximumScoreInput" maxHeight="50.0" maxWidth="60.0" />
+               </children>
+            </VBox>
+            <VBox fx:id="expectedAnswer" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" visible="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Expected Answer" textAlignment="CENTER" />
+                  <TextField fx:id="expectedAnswerInput" maxWidth="120.0" />
+               </children>
+            </VBox>
+            <VBox fx:id="options" prefHeight="200.0" prefWidth="100.0" spacing="15.0" visible="false">
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Option (a)" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Option (b)" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Option (c)" />
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Option (d)" />
+               </children>
+            </VBox>
+            <VBox fx:id="optionInput" prefHeight="200.0" prefWidth="100.0" visible="false" GridPane.columnIndex="1">
+               <children>
+                  <TextField fx:id="optionA">
+                     <VBox.margin>
+                        <Insets top="3.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="optionB" />
+                  <TextField fx:id="optionC" />
+                  <TextField fx:id="optionD" />
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+      <RadioButton fx:id="type" layoutX="482.0" layoutY="83.0" mnemonicParsing="false" text="MCQs">
+         <toggleGroup>
+            <ToggleGroup fx:id="answerType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="type" layoutX="482.0" layoutY="109.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="89.0" text="True/False" toggleGroup="$answerType" />
+      <RadioButton fx:id="type" layoutX="482.0" layoutY="136.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="89.0" text="Numeric" toggleGroup="$answerType" />
+      <Text fx:id="answerText" layoutX="471.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Answer Type:" />
+      <Text fx:id="questionHeading" layoutX="178.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question" textAlignment="CENTER" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="enterQuestion" layoutX="26.0" layoutY="92.0" prefHeight="70.0" prefWidth="406.0" visible="false" />
+      <ListView fx:id="questionList" layoutX="467.0" layoutY="162.0" prefHeight="233.0" prefWidth="120.0" />
+      <Button fx:id="finishQuiz" layoutX="3.0" layoutY="1.0" mnemonicParsing="false" onAction="#onClickFinishQuiz" text="Finish Quiz" />
+   </children>
+</AnchorPane>
