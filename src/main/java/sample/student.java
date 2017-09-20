@@ -19,8 +19,4 @@ public class student {
         appStage.show();
 
     }
-
-    public void onClickNext(){
-
-    }
 }
